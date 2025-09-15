@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Central de Bolsas</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-dNrK8KjbZ8XjO2Qutv2MPvR+UO8NQw3tDi5l7V/VNbtCWUwOeGxKpD9V2muKqzPytBRPjGwYTtZMYuOZf3s8kA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Seu CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" defer></script>
+</head>
+
+<body>
+    <header id="header"></header>
+
+    <!-- 🔎 Navbar com campo de pesquisa (fundo branco + cinza) -->
+    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #ffffff; border-bottom: 1px solid #ddd;">
+        <div class="container-fluid">
+            <!-- Logo / Nome -->
+            <a class="navbar-brand fw-bold" style="color: #616161;" href="#">Página Inicial</a>
+
+
+            <!-- Botão hambúrguer mobile -->
+            <button class="navbar-toggler text-secondary border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links e busca -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active text-secondary fw-semibold" aria-current="page"
+                            href="#">Início</a></li>
+                    <li class="nav-item"><a class="nav-link text-secondary" href="#">Tutoriais</a></li>
+                    <li class="nav-item"><a class="nav-link text-secondary" href="#">Dúvidas Frequentes</a></li>
+                </ul>
+
+                <!-- Campo de busca -->
+                <form class="d-flex" role="search">
+                    <input id="searchInput" class="form-control me-2 border-secondary" type="search"
+                        placeholder="Buscar vídeos..." aria-label="Buscar">
+                    <button class="btn btn-outline-secondary" type="button">🔎</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <main class="container-fluid mt-0" role="main">
+        <div class="row">
+            <!-- Menu lateral -->
+            <aside class="col-md-3 col-lg-2 sidebar d-flex flex-column p-0" role="complementary"
+                style="height: 101.3vh; background-color: #f8f9fa;">
+
+                <div id="menu" style="width: 100%; height:100%; "></div>
+
+
+            </aside>
+
+            <!-- Conteúdo principal -->
+            <section class="col-md-9 col-lg-10" aria-label="Conteúdo principal">
+                <div id="ads"></div>
+                <hr class="my-4" />
+
+                <!-- Seção de Vídeos -->
+                <section aria-labelledby="titulo-videos" class="mt-5">
+                    <h2 id="titulo-videos" class="fw-bold">Vídeos</h2>
+                    <p class="lead" style="font-family: 'Red Hat Display';">Assista aos tutoriais abaixo:</p>
+
+                    <div id="videoContainer" class="row g-4">
+                        <!-- Card de vídeo -->
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <article class="card h-100 video-card" role="region" aria-labelledby="titulo-video-1">
+                                <div class="ratio ratio-16x9">
+                                    <video class="w-100" poster="Imagens/Pedido de Pagamento.png" muted
+                                        preload="metadata" playsinline loading="lazy">
+                                        <source src="Recording 2025-04-16 135614.mp4" type="video/mp4" />
+                                        Seu navegador não suporta o vídeo.
+                                    </video>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <h3 id="titulo-video-1" class="card-title h6">Pedidos de Pagamento de Pessoa Física
+                                    </h3>
+                                    <p class="card-text">Envie seu Pedido de Pagamento pelo sistema Conveniar em poucos
+                                        passos.</p>
+                                    <button type="button" class="btn mt-auto botao-assista" data-bs-toggle="modal"
+                                        data-bs-target="#videoModal" data-video-src="Recording 2025-04-16 135614.mp4"
+                                        data-video-poster="Imagens/Pedido de Pagamento.png"
+                                        data-video-title="Processo - Pedido de Pagamento"
+                                        data-link-href="https://conveniar.atlassian.net/wiki/spaces/CONV/pages/1016571/Processo+-+Pedido+de+Pagamento"
+                                        aria-label="Assistir vídeo sobre Pedido de Pagamento">
+                                        Assista aqui
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Outro Card -->
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <article class="card h-100 video-card" role="region" aria-labelledby="titulo-video-2">
+                                <div class="ratio ratio-16x9">
+                                    <video class="w-100" poster="Imagens/Pedido de Entrada de Receita v2.0.png" muted
+                                        preload="metadata" playsinline loading="lazy">
+                                        <source src="teste de lançamento .mp4" type="video/mp4" />
+                                        Seu navegador não suporta o vídeo.
+                                    </video>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <h3 id="titulo-video-2" class="card-title h6">Processo - Pedido de Entrada de
+                                        Receita</h3>
+                                    <p class="card-text">Saiba como enviar um Pedido de Entrada de Receita.</p>
+                                    <button type="button" class="btn mt-auto botao-assista" data-bs-toggle="modal"
+                                        data-bs-target="#videoModal" data-video-src="teste de lançamento .mp4"
+                                        data-video-poster="Imagens/Pedido de Entrada de Receita v2.0.png"
+                                        data-video-title="Processo - Pedido de Entrada de Receita"
+                                        data-link-href="https://conveniar.atlassian.net/wiki/spaces/CONV/pages/1016571/Processo+-+Pedido+de+Pagamento"
+                                        aria-label="Assistir vídeo sobre Entrada de Receita">
+                                        Assista aqui
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Outro Card -->
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <article class="card h-100 video-card" role="region" aria-labelledby="titulo-video-2">
+                                <div class="ratio ratio-16x9">
+                                    <video class="w-100" poster="Imagens/Pedido de Entrada de Receita v2.0.png" muted
+                                        preload="metadata" playsinline loading="lazy">
+                                        <source src="teste de lançamento .mp4" type="video/mp4" />
+                                        Seu navegador não suporta o vídeo.
+                                    </video>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <h3 id="titulo-video-2" class="card-title h6">Processo - Pedido de Entrada de
+                                        Receita</h3>
+                                    <p class="card-text">Saiba como enviar um Pedido de Entrada de Receita.</p>
+                                    <button type="button" class="btn mt-auto botao-assista" data-bs-toggle="modal"
+                                        data-bs-target="#videoModal" data-video-src="teste de lançamento .mp4"
+                                        data-video-poster="Imagens/Pedido de Entrada de Receita v2.0.png"
+                                        data-video-title="Processo - Pedido de Entrada de Receita"
+                                        data-link-href="https://conveniar.atlassian.net/wiki/spaces/CONV/pages/1016571/Processo+-+Pedido+de+Pagamento"
+                                        aria-label="Assistir vídeo sobre Entrada de Receita">
+                                        Assista aqui
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Outro Card -->
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <article class="card h-100 video-card" role="region" aria-labelledby="titulo-video-2">
+                                <div class="ratio ratio-16x9">
+                                    <video class="w-100" poster="Imagens/Pedido de Entrada de Receita v2.0.png" muted
+                                        preload="metadata" playsinline loading="lazy">
+                                        <source src="teste de lançamento .mp4" type="video/mp4" />
+                                        Seu navegador não suporta o vídeo.
+                                    </video>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <h3 id="titulo-video-2" class="card-title h6">Processo - Pedido de Entrada de
+                                        Receita</h3>
+                                    <p class="card-text">Saiba como enviar um Pedido de Entrada de Receita.</p>
+                                    <button type="button" class="btn mt-auto botao-assista" data-bs-toggle="modal"
+                                        data-bs-target="#videoModal" data-video-src="teste de lançamento .mp4"
+                                        data-video-poster="Imagens/Pedido de Entrada de Receita v2.0.png"
+                                        data-video-title="Processo - Pedido de Entrada de Receita"
+                                        data-link-href="https://conveniar.atlassian.net/wiki/spaces/CONV/pages/1016571/Processo+-+Pedido+de+Pagamento"
+                                        aria-label="Assistir vídeo sobre Entrada de Receita">
+                                        Assista aqui
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Outro Card -->
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <article class="card h-100 video-card" role="region" aria-labelledby="titulo-video-2">
+                                <div class="ratio ratio-16x9">
+                                    <video class="w-100" poster="Imagens/Pedido de Entrada de Receita v2.0.png" muted
+                                        preload="metadata" playsinline loading="lazy">
+                                        <source src="teste de lançamento .mp4" type="video/mp4" />
+                                        Seu navegador não suporta o vídeo.
+                                    </video>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <h3 id="titulo-video-2" class="card-title h6">Processo - Pedido de Entrada de
+                                        Receita</h3>
+                                    <p class="card-text">Saiba como enviar um Pedido de Entrada de Receita.</p>
+                                    <button type="button" class="btn mt-auto botao-assista" data-bs-toggle="modal"
+                                        data-bs-target="#videoModal" data-video-src="teste de lançamento .mp4"
+                                        data-video-poster="Imagens/Pedido de Entrada de Receita v2.0.png"
+                                        data-video-title="Processo - Pedido de Entrada de Receita"
+                                        data-link-href="https://conveniar.atlassian.net/wiki/spaces/CONV/pages/1016571/Processo+-+Pedido+de+Pagamento"
+                                        aria-label="Assistir vídeo sobre Entrada de Receita">
+                                        Assista aqui
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Outro Card -->
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <article class="card h-100 video-card" role="region" aria-labelledby="titulo-video-2">
+                                <div class="ratio ratio-16x9">
+                                    <video class="w-100" poster="Imagens/Pedido de Entrada de Receita v2.0.png" muted
+                                        preload="metadata" playsinline loading="lazy">
+                                        <source src="teste de lançamento .mp4" type="video/mp4" />
+                                        Seu navegador não suporta o vídeo.
+                                    </video>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <h3 id="titulo-video-2" class="card-title h6">Processo - Pedido de Entrada de
+                                        Receita</h3>
+                                    <p class="card-text">Saiba como enviar um Pedido de Entrada de Receita.</p>
+                                    <button type="button" class="btn mt-auto botao-assista" data-bs-toggle="modal"
+                                        data-bs-target="#videoModal" data-video-src="teste de lançamento .mp4"
+                                        data-video-poster="Imagens/Pedido de Entrada de Receita v2.0.png"
+                                        data-video-title="Processo - Pedido de Entrada de Receita"
+                                        data-link-href="https://conveniar.atlassian.net/wiki/spaces/CONV/pages/1016571/Processo+-+Pedido+de+Pagamento"
+                                        aria-label="Assistir vídeo sobre Entrada de Receita">
+                                        Assista aqui
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Outro Card -->
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <article class="card h-100 video-card" role="region" aria-labelledby="titulo-video-2">
+                                <div class="ratio ratio-16x9">
+                                    <video class="w-100" poster="Imagens/Pedido de Entrada de Receita v2.0.png" muted
+                                        preload="metadata" playsinline loading="lazy">
+                                        <source src="teste de lançamento .mp4" type="video/mp4" />
+                                        Seu navegador não suporta o vídeo.
+                                    </video>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <h3 id="titulo-video-2" class="card-title h6">Processo - Pedido de Entrada de
+                                        Receita</h3>
+                                    <p class="card-text">Saiba como enviar um Pedido de Entrada de Receita.</p>
+                                    <button type="button" class="btn mt-auto botao-assista" data-bs-toggle="modal"
+                                        data-bs-target="#videoModal" data-video-src="teste de lançamento .mp4"
+                                        data-video-poster="Imagens/Pedido de Entrada de Receita v2.0.png"
+                                        data-video-title="Processo - Pedido de Entrada de Receita"
+                                        data-link-href="https://conveniar.atlassian.net/wiki/spaces/CONV/pages/1016571/Processo+-+Pedido+de+Pagamento"
+                                        aria-label="Assistir vídeo sobre Entrada de Receita">
+                                        Assista aqui
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Outro Card -->
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <article class="card h-100 video-card" role="region" aria-labelledby="titulo-video-2">
+                                <div class="ratio ratio-16x9">
+                                    <video class="w-100" poster="Imagens/Pedido de Entrada de Receita v2.0.png" muted
+                                        preload="metadata" playsinline loading="lazy">
+                                        <source src="teste de lançamento .mp4" type="video/mp4" />
+                                        Seu navegador não suporta o vídeo.
+                                    </video>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <h3 id="titulo-video-2" class="card-title h6">Processo - Pedido de Entrada de
+                                        Receita</h3>
+                                    <p class="card-text">Saiba como enviar um Pedido de Entrada de Receita.</p>
+                                    <button type="button" class="btn mt-auto botao-assista" data-bs-toggle="modal"
+                                        data-bs-target="#videoModal" data-video-src="teste de lançamento .mp4"
+                                        data-video-poster="Imagens/Pedido de Entrada de Receita v2.0.png"
+                                        data-video-title="Processo - Pedido de Entrada de Receita"
+                                        data-link-href="https://conveniar.atlassian.net/wiki/spaces/CONV/pages/1016571/Processo+-+Pedido+de+Pagamento"
+                                        aria-label="Assistir vídeo sobre Entrada de Receita">
+                                        Assista aqui
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Outro Card -->
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <article class="card h-100 video-card" role="region" aria-labelledby="titulo-video-2">
+                                <div class="ratio ratio-16x9">
+                                    <video class="w-100" poster="Imagens/Pedido de Entrada de Receita v2.0.png" muted
+                                        preload="metadata" playsinline loading="lazy">
+                                        <source src="teste de lançamento .mp4" type="video/mp4" />
+                                        Seu navegador não suporta o vídeo.
+                                    </video>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <h3 id="titulo-video-2" class="card-title h6">Processo - Pedido de Entrada de
+                                        Receita</h3>
+                                    <p class="card-text">Saiba como enviar um Pedido de Entrada de Receita.</p>
+                                    <button type="button" class="btn mt-auto botao-assista" data-bs-toggle="modal"
+                                        data-bs-target="#videoModal" data-video-src="teste de lançamento .mp4"
+                                        data-video-poster="Imagens/Pedido de Entrada de Receita v2.0.png"
+                                        data-video-title="Processo - Pedido de Entrada de Receita"
+                                        data-link-href="https://conveniar.atlassian.net/wiki/spaces/CONV/pages/1016571/Processo+-+Pedido+de+Pagamento"
+                                        aria-label="Assistir vídeo sobre Entrada de Receita">
+                                        Assista aqui
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Outro Card -->
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <article class="card h-100 video-card" role="region" aria-labelledby="titulo-video-2">
+                                <div class="ratio ratio-16x9">
+                                    <video class="w-100" poster="Imagens/Pedido de Entrada de Receita v2.0.png" muted
+                                        preload="metadata" playsinline loading="lazy">
+                                        <source src="teste de lançamento .mp4" type="video/mp4" />
+                                        Seu navegador não suporta o vídeo.
+                                    </video>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <h3 id="titulo-video-2" class="card-title h6">Processo - Pedido de Entrada de
+                                        Receita</h3>
+                                    <p class="card-text">Saiba como enviar um Pedido de Entrada de Receita.</p>
+                                    <button type="button" class="btn mt-auto botao-assista" data-bs-toggle="modal"
+                                        data-bs-target="#videoModal" data-video-src="teste de lançamento .mp4"
+                                        data-video-poster="Imagens/Pedido de Entrada de Receita v2.0.png"
+                                        data-video-title="Processo - Pedido de Entrada de Receita"
+                                        data-link-href="https://conveniar.atlassian.net/wiki/spaces/CONV/pages/1016571/Processo+-+Pedido+de+Pagamento"
+                                        aria-label="Assistir vídeo sobre Entrada de Receita">
+                                        Assista aqui
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Outro Card -->
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <article class="card h-100 video-card" role="region" aria-labelledby="titulo-video-2">
+                                <div class="ratio ratio-16x9">
+                                    <video class="w-100" poster="Imagens/Pedido de Entrada de Receita v2.0.png" muted
+                                        preload="metadata" playsinline loading="lazy">
+                                        <source src="teste de lançamento .mp4" type="video/mp4" />
+                                        Seu navegador não suporta o vídeo.
+                                    </video>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <h3 id="titulo-video-2" class="card-title h6">Processo - Pedido de Entrada de
+                                        Receita</h3>
+                                    <p class="card-text">Saiba como enviar um Pedido de Entrada de Receita.</p>
+                                    <button type="button" class="btn mt-auto botao-assista" data-bs-toggle="modal"
+                                        data-bs-target="#videoModal" data-video-src="teste de lançamento .mp4"
+                                        data-video-poster="Imagens/Pedido de Entrada de Receita v2.0.png"
+                                        data-video-title="Processo - Pedido de Entrada de Receita"
+                                        data-link-href="https://conveniar.atlassian.net/wiki/spaces/CONV/pages/1016571/Processo+-+Pedido+de+Pagamento"
+                                        aria-label="Assistir vídeo sobre Entrada de Receita">
+                                        Assista aqui
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Outro Card -->
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <article class="card h-100 video-card" role="region" aria-labelledby="titulo-video-2">
+                                <div class="ratio ratio-16x9">
+                                    <video class="w-100" poster="Imagens/Pedido de Entrada de Receita v2.0.png" muted
+                                        preload="metadata" playsinline loading="lazy">
+                                        <source src="teste de lançamento .mp4" type="video/mp4" />
+                                        Seu navegador não suporta o vídeo.
+                                    </video>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <h3 id="titulo-video-2" class="card-title h6">Processo - Pedido de Entrada de
+                                        Receita</h3>
+                                    <p class="card-text">Saiba como enviar um Pedido de Entrada de Receita.</p>
+                                    <button type="button" class="btn mt-auto botao-assista" data-bs-toggle="modal"
+                                        data-bs-target="#videoModal" data-video-src="teste de lançamento .mp4"
+                                        data-video-poster="Imagens/Pedido de Entrada de Receita v2.0.png"
+                                        data-video-title="Processo - Pedido de Entrada de Receita"
+                                        data-link-href="https://conveniar.atlassian.net/wiki/spaces/CONV/pages/1016571/Processo+-+Pedido+de+Pagamento"
+                                        aria-label="Assistir vídeo sobre Entrada de Receita">
+                                        Assista aqui
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+
+                    </div>
+
+                    <!-- Modal de vídeo -->
+                    <div id="videoModal" class="modal fade" tabindex="-1" aria-labelledby="videoModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered" role="dialog">
+                            <div class="modal-content">
+                                <header class="modal-header">
+                                    <h2 id="videoModalLabel" class="modal-title h5">Vídeo Tutorial</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fechar"></button>
+                                </header>
+                                <div class="modal-body">
+                                    <div class="ratio ratio-16x9">
+                                        <video id="modalVideoPlayer" controls preload="metadata" playsinline
+                                            class="w-100">
+                                            <source id="modalVideoSource" src="" type="video/mp4" />
+                                            Seu navegador não suporta o vídeo.
+                                        </video>
+                                    </div>
+                                    <hr />
+                                    <a id="modalLink" href="#" target="_blank" rel="noopener noreferrer">
+                                        <button type="button" class="btn btn-danger" aria-label="Ver mais detalhes">Ver
+                                            Mais</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4" />
+                </section>
+
+                <!-- Avisos -->
+                <section aria-labelledby="titulo-avisos" class="card shadow border-0 my-5 aba-avisos">
+                    <div class="card-header custom-red d-flex align-items-center titulo-aviso">
+                        <i class="bi bi-exclamation-triangle-fill me-2 fs-4" aria-hidden="true"></i>
+                        <h4 id="titulo-avisos" class="mb-0">Avisos Importantes</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>[10/07/2025]</strong> Início do período de solicitação
+                                de bolsas no sistema SIGFAP.</li>
+                            <li class="list-group-item"><strong>[08/07/2025]</strong> Atualização no processo de upload
+                                de documentos.</li>
+                            <li class="list-group-item"><strong>[05/07/2025]</strong> Novo tutorial disponível na aba
+                                "Dúvidas Frequentes".</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <footer role="contentinfo" class="footer text-center py-3" style="background-color: #b30000; color: white; ">
+        Todos os direitos reservados.
+    </footer>
+
+    <!-- Script -->
+    <script>
+        // Carregar partes externas
+        function carregarParte(id, caminho) {
+            fetch(caminho)
+                .then(res => res.ok ? res.text() : Promise.reject(`Erro ao carregar ${caminho}`))
+                .then(html => {
+                    document.getElementById(id).innerHTML = html;
+                    if (id === 'ads') {
+                        const carousel = document.querySelector('#ads .carousel');
+                        if (carousel) new bootstrap.Carousel(carousel, { interval: 5000, wrap: true });
+                    }
+                })
+                .catch(console.error);
+        }
+
+        carregarParte('header', 'partes/header.html');
+        carregarParte('menu', 'partes/menu-lateral-principal.html');
+        carregarParte('menu2', 'partes/menu-lateral-informacoes.html');
+        carregarParte('ads', 'partes/carrossel-documentos.html');
+
+        // Controle do modal de vídeo
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('videoModal');
+            const videoPlayer = modal.querySelector('#modalVideoPlayer');
+            const source = modal.querySelector('#modalVideoSource');
+            const title = modal.querySelector('#videoModalLabel');
+            const link = modal.querySelector('#modalLink');
+
+            modal.addEventListener('show.bs.modal', event => {
+                const btn = event.relatedTarget;
+                if (!btn) return;
+
+                const src = btn.getAttribute('data-video-src') || '';
+                const poster = btn.getAttribute('data-video-poster') || '';
+                const vidTitle = btn.getAttribute('data-video-title') || 'Vídeo Tutorial';
+                const href = btn.getAttribute('data-link-href') || '#';
+
+                source.src = src;
+                videoPlayer.setAttribute('poster', poster);
+                videoPlayer.load();
+                title.textContent = vidTitle;
+                link.href = href;
+
+                videoPlayer.play().catch(() => {
+                    console.warn('Autoplay bloqueado pelo navegador.');
+                });
+            });
+
+            modal.addEventListener('hidden.bs.modal', () => {
+                videoPlayer.pause();
+                videoPlayer.currentTime = 0;
+                source.src = '';
+            });
+
+            // 🔎 Filtro de pesquisa (palavra inclusa no título)
+            document.getElementById('searchInput').addEventListener('input', function () {
+                const search = this.value.toLowerCase();
+                document.querySelectorAll('.video-card').forEach(card => {
+                    const title = card.querySelector('.card-title').textContent.toLowerCase();
+                    card.parentElement.style.display = title.includes(search) ? '' : 'none';
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

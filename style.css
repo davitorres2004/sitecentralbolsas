@@ -1,0 +1,626 @@
+/* Estilos gerais do corpo */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #e8e8e8;
+    min-height: 100vh;
+
+    background: linear-gradient(to bottom, #fff, #d3d1d1);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Estilos da barra de navegação */
+.navbar-brand img {
+    height: 70px;
+
+
+}
+
+ul li {
+    margin-bottom: 10px;
+    /* Espaçamento entre as linhas */
+}
+
+/* diminui o tamanho de todos os h2 dentro dessa seção */
+.col-md-9.col-lg-10 h2 {
+    font-size: 1.2rem;
+    /* ajuste conforme necessário */
+}
+
+.col-md-9.col-lg-10 h1 {
+    font-size: 1.7rem;
+    /* ajuste conforme necessário */
+}
+
+
+
+.navbar-toggler {
+    padding: 0.6rem 1.2rem;
+    background-color: #888;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+.barra-navegar {
+    padding: 0.6rem 1.2rem;
+    background-color: #888;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+.botao_pesquisar {
+    padding: 0.6rem 1.2rem;
+    background-color: #b30000;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+/* Estilos do carrossel */
+.carousel img {
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+}
+
+/* Estilos do card */
+.card {
+    border: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.video-card {
+    border: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.avisocor {
+    background-color: #b30000;
+
+}
+
+.card-header.custom-red {
+    background-color: #b30000;
+    color: #fff;
+}
+
+/* Estilos de botões */
+.botao-assista {
+    padding: 0.6rem 1.2rem;
+    background-color: #b30000;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+    margin-top: auto;
+}
+
+/* Estilos do menu */
+.menuprincipal {
+    background: linear-gradient(135deg, #b30000, #b30000);
+    border: none;
+    box-shadow: 0 4px 15px rgba(179, 0, 0, 0.3);
+}
+
+.menu-info {
+    background: linear-gradient(135deg, #b30000, #b30000);
+    box-shadow: 0 4px 15px rgba(179, 0, 0, 0.3);
+}
+
+.menu-info-title {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+
+
+}
+
+/* Estilos do rodapé */
+.rodape {
+    background-color: #b30000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Estilos do modal */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.btn-close {
+    padding: 0.6rem 1.2rem;
+    background-color: #888;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+/* Estilos do vídeo */
+.video-player {
+    width: 100%;
+}
+
+/* Estilos de avisos */
+.titulo_aviso {
+    background-color: #b30000;
+    color: #fff;
+}
+
+.aba-avisos {
+    border: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de lista */
+.list-group-item {
+    font-size: 0.95rem;
+}
+
+/* Estilos de conteúdo complementar */
+.conteudo-complemento {
+    background-color: #f8f9fa;
+}
+
+/* Estilos gerais de cores */
+.custom-red {
+    background-color: #b30000;
+}
+
+/* Estilos da barra lateral */
+.sidebar {
+    background-color: var(--sidebar-bg);
+
+
+    box-shadow: 0 2px 8px var(--shadow-dark);
+    height: fit-content;
+}
+
+/* =============================
+   Estilos do menu de navegação
+============================= */
+.menu-nav {
+    background-color: #b30000;
+    /* vermelho forte */
+    box-shadow: 0 4px 12px rgba(179, 0, 0, 0.5);
+    /* sombra suave */
+    color: var(--white);
+    border: 0;
+    padding: 1rem 0.5rem;
+    /* espaçamento interno */
+}
+
+/* Estilos do título do menu */
+.menu-title {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+    color: var(--white);
+}
+
+/* =============================
+   Estilos dos itens do menu
+============================= */
+.menu-item {
+    padding: 13px 20px;
+    /* espaço interno confortável */
+    margin: 4px 0;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    /* verticalmente centralizado */
+    justify-content: flex-start;
+    /* alinhado à esquerda */
+    gap: 10px;
+    /* espaço entre ícones e texto */
+    background-color: rgba(255, 255, 255, 0.05);
+    /* destaque sutil */
+    border: none;
+    color: var(--white);
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    /* sombra leve */
+}
+
+/* Efeitos de hover e foco */
+.menu-item:hover,
+.menu-item:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateX(4px);
+    /* leve deslocamento ao passar o mouse */
+    cursor: pointer;
+}
+
+/* Foco acessível */
+.menu-item:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
+}
+
+/* Item ativo */
+.menu-item.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    font-weight: 600;
+}
+
+
+/* Estilos dos ícones */
+.icon-info {
+    width: 20px;
+    margin-right: 12px;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+/* Estilos da área de rolagem do menu */
+.menu-scroll {
+    max-height: 900px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar) transparent;
+}
+
+/* Estilos da barra de rolagem para navegadores baseados em WebKit */
+.menu-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.menu-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.menu-scroll::-webkit-scrollbar-thumb {
+    background: var(--scrollbar);
+    border-radius: 4px;
+}
+
+.menu-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Variáveis CSS */
+:root {
+    --primary-red: #b30000;
+    --light-red: #cc3333;
+    --sidebar-bg: #f8f9fa;
+    --white: #ffffff;
+    --shadow-red: rgba(179, 0, 0, 0.3);
+    --shadow-dark: rgba(0, 0, 0, 0.15);
+    --scrollbar: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+        padding: 0.5rem;
+    }
+
+    .menu-nav {
+        padding: 0.75rem;
+    }
+
+    .menu-nav[aria-label="Informações"] {
+        padding: 1rem;
+    }
+
+    .menu-item {
+        font-size: 0.9rem;
+        padding: 10px 12px;
+    }
+
+    .icon-info {
+        width: 18px;
+        font-size: 0.9rem;
+    }
+
+    #menu,
+    #menu2 {
+        display: none;
+    }
+
+
+}
+
+
+@media (min-width: 992px) {
+
+    .sidebar {
+        position: sticky;
+        top: 1rem;
+    }
+
+    .parte_videos {
+        transform: translateY(-4%)
+    }
+
+    .sessaoavisos {
+
+
+        transform: translateY(-4.5%)
+    }
+
+    .contato_informacao {
+        transform: translateY(-11.5%)
+    }
+
+
+
+
+    .palavra-menu {
+        margin-top: 10px;
+    }
+
+    .sessao {
+
+        transform: translateY(-6%)
+    }
+}
+
+.menu-nav,
+.menu-scroll,
+.menu-item {
+    width: 100%;
+    white-space: normal;
+    overflow-x: hidden;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    pointer-events: auto;
+    /* deve estar ativo */
+}
+
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 1rem);
+}
+
+.modal-content {
+    max-height: 90vh;
+    overflow: auto;
+}
+
+#modalVideoPlayer {
+    width: 100%;
+    max-height: 60vh;
+    /* evita estourar a tela */
+}
+
+.carousel-borda {
+    border: 4px solid #b30000;
+}
+
+.carousel-caption {
+    backdrop-filter: blur(4px);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Navbar customizável */
+.custom-navbar {
+    background-color: #f8f9fa;
+    /* cor de fundo, modificável */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    /* sombra profunda */
+    border-radius: 0.5rem;
+    /* bordas arredondadas */
+    transition: all 0.3s ease;
+    /* animação suave para hover */
+}
+
+/* Efeito hover na navbar inteira */
+.custom-navbar:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    transform: translateY(-2px);
+    /* eleva a navbar levemente */
+}
+
+/* Links da navbar */
+.custom-navbar .nav-link {
+    color: #333;
+    /* cor padrão */
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* Hover nos links */
+.custom-navbar .nav-link:hover {
+    color: #0d6efd;
+    /* azul bootstrap */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão de pesquisa */
+.custom-navbar .btn-outline-success {
+    transition: all 0.3s;
+}
+
+.custom-navbar .btn-outline-success:hover {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #fff;
+}
+
+/* ===========================
+   Menu de Navegação Refinado
+=========================== */
+
+/* Container geral dos menus */
+.menu-nav {
+    background: linear-gradient(145deg, #b30000, #8a0000);
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    color: #fff;
+
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+/* Efeito hover no bloco do menu */
+.menu-nav:hover {
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+    transform: translateY(-3px);
+}
+
+/* Título do menu */
+.menu-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    letter-spacing: 0.5px;
+    color: #fff;
+}
+
+/* Área de rolagem (se lista for longa) */
+.menu-scroll {
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+/* Barra de rolagem estilizada */
+.menu-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.menu-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.menu-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.menu-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* ===========================
+   Itens do Menu
+=========================== */
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    margin: 6px 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.06);
+
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Ícones */
+.icon-info {
+    font-size: 1.05rem;
+    flex-shrink: 0;
+    width: 22px;
+    text-align: center;
+}
+
+/* Hover */
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(6px);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Foco acessível */
+.menu-item:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.6);
+    outline-offset: 2px;
+}
+
+/* Item ativo */
+.menu-item.active {
+    background: rgba(255, 255, 255, 0.25);
+    font-weight: 600;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* ===========================
+   Responsividade
+=========================== */
+
+/* Mobile */
+@media (max-width: 768px) {
+    .menu-nav {
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+    }
+
+    .menu-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .menu-item {
+        font-size: 0.9rem;
+        padding: 10px 14px;
+    }
+
+    .icon-info {
+        font-size: 0.9rem;
+        width: 18px;
+    }
+}
+
+/* Desktop - menus lado a lado */
+@media (min-width: 992px) {
+    .menus-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
